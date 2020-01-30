@@ -1,0 +1,13 @@
+<div>
+
+  <% if user_signed_in? %>
+    <% if current_user.otp_required_for_login %>
+      <%= button_to "ログアウト", destroy_user_session_path, method: :delete %>
+      <%= button_to "Disable 2FA", two_factor_auth_path, method: :delete %>
+    <% else %>
+      <%= button_to "Enable 2FA", new_two_factor_auth_path, method: :get %>
+      <%= button_to "ログイン", new_user_session_path, class: 'post' %>
+      <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
+    <% end %>
+  <% end %>
+</div>
