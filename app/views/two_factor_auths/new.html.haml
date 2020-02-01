@@ -1,0 +1,10 @@
+%h1 Enable 2FA
+- if @error
+  %div= @error
+%div= raw @qr_code
+= form_tag two_factor_auth_path do
+  .field
+    = label_tag :otp_attempt
+    %br/
+    = text_field_tag :otp_attempt
+  = submit_tag :submit

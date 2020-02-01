@@ -1,0 +1,8 @@
+%h2 Log in
+= form_for(resource, as: resource_name, url: session_path(resource_name), method: :post) do |f|
+  .field
+    = f.label :otp_attempt
+    %br/
+    = f.text_field :otp_attempt
+  .actions
+    = f.submit "Verify"

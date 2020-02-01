@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     registrations: 'users/registrations',
     sessions: 'users/sessions'
   }
+  get "home/show"
   resource :two_factor_auth, only: [:new, :create, :destroy]
   root to: "home#index"
 end
