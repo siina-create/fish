@@ -1,0 +1,15 @@
+.show__wrapper
+  .top
+    = @name
+    さんのマイページです
+  .main
+    .form
+      -if @himitu.nil?
+        = form_for @profile, url:home_path do |f|
+          = f.label :秘密の内容
+          = f.text_field :sentence,required:""
+          = f.hidden_field :user_id,value:current_user.id
+          = f.submit "送信する"
+      -else
+        
+        = @himitu.sentence

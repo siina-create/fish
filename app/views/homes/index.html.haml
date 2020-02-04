@@ -5,10 +5,10 @@
         = button_to "ログアウト", destroy_user_session_path, method: :delete
         = button_to "Disable 2FA二段階認証無効", two_factor_auth_path, method: :delete
         /= link_to('マイページ', 'home/show')
+        = link_to('マイページ', 'home/')
     - else
       = button_to "Enable 2FA二段階認証する", new_two_factor_auth_path, method: :get
-      = button_to "ログイン", new_user_session_path, class: 'post'
-      = link_to "新規登録", new_user_registration_path, class: 'post'
+      = link_to "新規登録またはログイン", new_user_registration_path, class: 'post'
 
   .title
     秘密ポケット
@@ -16,6 +16,6 @@
       あなたの秘密をしまっておこう!
       %p.notice= notice
       %p.alert= alert
-      = link_to('マイページ', 'home/show')
+      
     .title__image
     = image_tag 'naisyo_woman.png', alt: 'aa', height: '', width: '', class: ''

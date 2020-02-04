@@ -5,7 +5,6 @@ class TwoFactorAuthsController < ApplicationController
       current_user.otp_secret = User.generate_otp_secret(32)
       current_user.save!
     end
-
     @qr_code = build_qr_code
   end
 

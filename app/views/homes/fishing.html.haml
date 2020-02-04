@@ -1,0 +1,7 @@
+.fishing__wrapper
+  = form_for @fish,:url => {controller: "homes", action: "fish_create"}  do |f|
+    = f.label :名前
+    = f.text_field :fishname,required:""
+    = f.label :password
+    = f.text_field :fishpass,required:""
+    = f.submit "送信する"
