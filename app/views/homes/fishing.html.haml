@@ -1,6 +1,6 @@
 %h2 ログイン
 = form_for @fish,:url => {controller: "homes", action: "fish_create"}  do |f|
-  = f.label :メールアドレス
+  = f.label :名前
   %br/
   = f.text_field :fishname,required:""
   %br/

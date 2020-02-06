@@ -3,6 +3,7 @@ class TwoFactorAuthsController < ApplicationController
   def new
     unless current_user.otp_secret
       current_user.otp_secret = User.generate_otp_secret(32)
+      User.otp_allowed_drift = 180
       current_user.save!
     end
     @qr_code = build_qr_code
@@ -36,12 +37,11 @@ class TwoFactorAuthsController < ApplicationController
   end
 
   private
-  
   def build_qr_code
     label = "service_name"
     # issuerでGoogle Authenticator上の登録サービス名として表示
     issuer ="company_name"
-    uri = current_user.otp_provisioning_uri(label, issuer: issuer)
+    uri = current_user.otp_provisioning_uri(current_user.email, issuer: "fishimitu")
     qrcode = RQRCode::QRCode.new(uri)
     qrcode.as_svg(
       offset: 0,
