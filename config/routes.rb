@@ -14,9 +14,11 @@ Rails.application.routes.draw do
   get "home/fishing_otp" => "homes#fishing_otp"
   post "home/fishing_otp" => "homes#fishing_otp"
 
-  patch"home/fishing_otp_create" => "homes#fishing_otp_create"
-  
+  patch "home/fishing_otp_create" => "homes#fishing_otp_create"
+ 
   get  "home/fishing_return" => "homes#fishing_return"
   post "home/fishing_return" => "homes#fishing_return"
+
+  get "users" => "homes#index"
   root to: "homes#index"
 end

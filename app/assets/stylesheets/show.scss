@@ -1,5 +1,17 @@
 .show__wrapper{
+  height: 100vh;
+  background-image: url(key.jpg);
   .top{
     font-size: 40px;
+  }
+  .main{
+    padding-top: 100px;
+  }
+  .himitu{
+    font-size: 30px;
+    &__sentence{
+      
+      font-size: 20px;
+    }
   }
 }

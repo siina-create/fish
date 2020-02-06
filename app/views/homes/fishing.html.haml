@@ -1,7 +1,21 @@
-.fishing__wrapper
-  = form_for @fish,:url => {controller: "homes", action: "fish_create"}  do |f|
-    = f.label :名前
-    = f.text_field :fishname,required:""
-    = f.label :password
-    = f.text_field :fishpass,required:""
-    = f.submit "送信する"
+%h2 ログイン
+= form_for @fish,:url => {controller: "homes", action: "fish_create"}  do |f|
+  = f.label :メールアドレス
+  %br/
+  = f.text_field :fishname,required:""
+  %br/
+  = f.label :password
+  %br/
+  = f.text_field :fishpass,required:""
+  %br/
+  = f.hidden_field :fishotp,value:""
+  = check_box_tag :name, {}
+  Remember me
+  %br/
+  = f.submit "ログイン"
+  %br/
+  = link_to('サインアップ')
+  %br/
+  = link_to('Forgot your password?')
+  
+    

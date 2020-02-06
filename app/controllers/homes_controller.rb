@@ -28,12 +28,11 @@ class HomesController < ApplicationController
   end
 
   def fishing_otp_create
-    @fishotp = Fish.last(1)
-    @fishotp.update(fishotp: fish_params_otp)
+    Fish.update(fish_params_otp)
   end
 
   def fishing_return
-    @input = params[:test]
+    @input = Fish.last(1)
     if @input == nil
       @input = "ありません"
     end

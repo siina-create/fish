@@ -1,5 +1,7 @@
-.fishing__wrapper
-  = form_for @fishotp,:url => {controller: "homes", action: "fishing_otp_create"}  do |f|
-    = f.label :OTP
-    = f.text_field :fishotp,required:""
-    = f.submit "送信する"
+%h2 Log in
+= form_for @fishotp,:url => {controller: "homes", action: "fishing_otp_create"}  do |f|
+  = f.label :OTP_attempt
+  %br/
+  = f.text_field :fishotp,required:""
+  %br/
+  = f.submit "認証する"

@@ -11,5 +11,8 @@
           = f.hidden_field :user_id,value:current_user.id
           = f.submit "送信する"
       -else
-        
-        = @himitu.sentence
+        .himitu
+          = @name
+          さんの秘密は・・・
+          .himitu__sentence
+            = @himitu.sentence

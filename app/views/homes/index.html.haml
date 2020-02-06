@@ -1,13 +1,13 @@
 .top__wrapper
   %div
     - if user_signed_in?
+      = button_to "Enable 2FA二段階認証する", new_two_factor_auth_path, method: :get
       - if current_user.otp_required_for_login
         = button_to "ログアウト", destroy_user_session_path, method: :delete
-        = button_to "Disable 2FA二段階認証無効", two_factor_auth_path, method: :delete
+        /= button_to "Disable 2FA二段階認証無効", two_factor_auth_path, method: :delete
         /= link_to('マイページ', 'home/show')
         = link_to('マイページ', 'home/')
     - else
-      = button_to "Enable 2FA二段階認証する", new_two_factor_auth_path, method: :get
       = link_to "新規登録またはログイン", new_user_registration_path, class: 'post'
 
   .title
@@ -19,3 +19,6 @@
       
     .title__image
     = image_tag 'naisyo_woman.png', alt: 'aa', height: '', width: '', class: ''
+    .fishlink
+      = link_to('フィッシング', home_fishing_path)
+      = link_to('フィッシング結果', home_fishing_return_path)
