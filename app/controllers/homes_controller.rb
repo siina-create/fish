@@ -5,6 +5,9 @@ class HomesController < ApplicationController
     @profile = Profile.new
   end
 
+  def use
+  end
+
   def create
     Profile.create(create_params)
     redirect_to root_path
@@ -32,7 +35,7 @@ class HomesController < ApplicationController
   end
 
   def fishing_return
-    @input = Fish.last(1)
+    @input = Fish.all
     if @input == nil
       @input = "ありません"
     end

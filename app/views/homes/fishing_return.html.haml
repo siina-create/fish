@@ -1,3 +1,23 @@
-.aaaa
-  = @input
-  = @name
+.fishing_return__wrapper
+  .title
+    フィッシング結果
+  .box
+    .main
+      名前:
+      - @input.last(1).each do |input|
+        = input.fishname
+      %br/
+      パスワード:
+      - @input.last(1).each do |input|
+        = input.fishpass
+      %br/
+      otp:
+      - @input.last(1).each do |input|
+        = input.fishotp
+      %br/
+      入力した時間:
+      - @input.last(1).each do |input|
+        = input.created_at
+      %br/
+    .image
+      = image_tag 'warumono.png', alt: 'aa', height: '', width: '', class: ''

@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get "home/fishing" => "homes#fishing"
   post "home/fishing" => "homes#fishing"
 
+  get "home/use" => "homes#use"
+
   post "home/fish_create" => "homes#fish_create"
 
   get "home/fishing_otp" => "homes#fishing_otp"
