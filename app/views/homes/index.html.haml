@@ -1,3 +1,5 @@
+%head
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 .top__wrapper
   %div
     - if user_signed_in?
@@ -9,7 +11,7 @@
         = link_to('マイページ', 'home/')
     - else
       = link_to "新規登録またはログイン", new_user_registration_path, class: 'post'
-
+      
   .title
     秘密ポケット
     .title__sub
@@ -20,6 +22,7 @@
       
     .title__image
     = image_tag 'naisyo_woman.png', alt: 'aa', height: '', width: '', class: ''
-    .fishlink
-      = link_to('フィッシング', home_fishing_path)
-      = link_to('フィッシング結果', home_fishing_return_path)
+  .link
+    %a.far.fa-angry{href: home_fishing_return_path}
+  .linka
+    %a.fas.fa-sign-in-alt{href: home_fishing_path}
