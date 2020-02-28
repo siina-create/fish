@@ -1,24 +1,21 @@
 # README
+## 概要
+このアプリはフィッシングサイトによる不正ログインを体験できるアプリです
+## 作成した経緯
+たまたまネット上で目にした記事がフィッシングサイト注意喚起の記事でした。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+その記事を読み、驚いたことがフィッシングサイトがワンタイムパスワードを突破して
+しまうということです
 
-Things you may want to cover:
+その手口を読み自分でも再現できるのではと思って作成しました
+## 使用した言語など
+ruby(gemのdeviceによりログイン、二段階認証の実装)
 
-* Ruby version
+haml、css（トップ画面、結果画面の見た目)
 
-* System dependencies
+MYSQLにて（各データの登録、上書き）
+## 使い方
+用意するもの:Google Authenticator（二段階認証のため） ダウンロードページ⇨https://apps.apple.com/jp/app/google-authenticator/id388497605
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://fishimitu.herokuapp.com/ にアクセスしてください
+使い方より確認してください
