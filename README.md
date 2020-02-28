@@ -18,4 +18,38 @@ MYSQLにて（各データの登録、上書き）
 用意するもの:Google Authenticator（二段階認証のため） ダウンロードページ⇨https://apps.apple.com/jp/app/google-authenticator/id388497605
 
 https://fishimitu.herokuapp.com/ にアクセスしてください
+
+1.左上の「新規登録またはログイン」をクリックする
+<img width="1411" alt="スクリーンショット 2020-02-28 17 28 27" src="https://user-images.githubusercontent.com/57381866/75524642-a7a9df00-5a51-11ea-9c70-9c04eafac512.png">
+
+2.メールアドレス、パスワードを入力し、新規登録をする 
+<img width="321" alt="スクリーンショット 2020-02-28 17 22 41" src="https://user-images.githubusercontent.com/57381866/75524653-ad9fc000-5a51-11ea-9e9d-515cf246115d.png">
+
+＊メールアドレス入力欄がありますが、実際に送信するわけでは無いので必ず仮のアドレスを使ってください
+
+3.標示されるQRコードをGoogle Authenticatorで読み込み表示される数字を入力
+
+4.ログイン後マイページへ行く その後マイページから秘密を投稿してください
+<img width="661" alt="スクリーンショット 2020-02-28 17 25 55" src="https://user-images.githubusercontent.com/57381866/75525407-20f60180-5a53-11ea-84e1-fd5a730e8901.png">
+
+
+
+
+これで準備完了です！フィッシングサイトを体験してみましょう！
+２人で行う、またはタブを２つ開いてお試しください
+
+⇨ログインする方はAへ
+
+⇨フィッシングする方はBへ
+
+A.トップページ下へスクロールし、
+%i.fas.fa-sign-in-alt{href: home_fishing_path}
+から移動しログインしてください
+
+B.トップページ下へスクロールし、
+%i.far.fa-angry{href: home_fishing_return_path}
+から移動してください
+
+するとパスワードやメールアドレスが出てきます ログインページへ移動し出てきた文字を打ち込んでみましょう
+
 その後、使い方ページに移動してください
