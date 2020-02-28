@@ -18,4 +18,4 @@ MYSQLにて（各データの登録、上書き）
 用意するもの:Google Authenticator（二段階認証のため） ダウンロードページ⇨https://apps.apple.com/jp/app/google-authenticator/id388497605
 
 https://fishimitu.herokuapp.com/ にアクセスしてください
-使い方より確認してください
+その後、使い方ページに移動してください
